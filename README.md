@@ -1,9 +1,9 @@
 # <mark>CSE-1203-exam </mark>
-- [x] [CT-Solution](##*__CT__*) :done:
-- [x] [Mid-Solution](##MID)
-- [x] [Lab-Solution](##Lab)
+- [x] [CT-Solution](##*__CT__*),[^1]
+- [x] [Mid-Solution](##MID),
+- [x] [Lab-Solution](##Lab),
 <br><br><br><br>
-## *__CT__*
+[^1]: ## *__CT__*
 ___Question CT-1___
 
 <img src="image/CT-1.jpg" alt="Image of CT-1">
