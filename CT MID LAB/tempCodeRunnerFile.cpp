@@ -20,7 +20,7 @@ class Number{
 int main()
 {
     Number obj, obj1(7, 5.00);
-    obj.show();  //0 0
-    obj1.show(); //7 5
+    obj.show();
+    obj1.show();
     return 0;
 }

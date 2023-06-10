@@ -40,3 +40,9 @@ int main() // class object niye kaj korle obosshoi c++ a return type int hobe
     CD d(10, 20);
     return 0;
 }
+
+
+20 0
+10 20
+destructing CD
+destructing AB

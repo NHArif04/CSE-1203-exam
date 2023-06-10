@@ -4,15 +4,15 @@
 - [x] [Lab-Solution](##Lab),
 <br><br><br><br>
 ## *__CT__*
-___Question CT-1___
+### ___Question CT-1___
 
 <img src="image/CT-1.jpg" alt="Image of CT-1">
 
 <br>
 
-<mark>***Solution:***
+***Solution:***
 <br>
-___Answer No. - 01____</mark>
+### <mark>___Answer No. - 01___</mark>
 
 **Class:** A user defined data type which holds its own data members and member functions which can be accessed and used by creating an instance of that class.
 
@@ -40,7 +40,7 @@ int main() {
 ```
 
 <br><br>
-<mark>___Answer No. - 02___</mark>
+### <mark>___Answer No. - 02___</mark>
 ```CPP
 #include<iostream>
 using namespace std;
@@ -68,7 +68,7 @@ int main(){
 }
 ```
 <br><br>
-<mark>___Answer No. - 03(a)___</mark>
+### <mark>___Answer No. - 03(a)___</mark>
 
 * **Namespace :**
 > A namespace is a container for identifiers that helps organize code by grouping related classes, functions, and variables under a unique name. It defines a scope or context in which identifiers are used and prevents naming conflicts by allowing for the use of the same identifier name in different parts of a program without causing conflicts.
@@ -80,24 +80,25 @@ int main(){
 > The scope resolution operator :: is used in C++ to specify the context of an identifier and to access hidden or out-of-scope elements. It helps prevent naming conflicts.
 
 <br><br>
-___Question CT-2___
+### ___Question CT-2___
 
 <img src="image/CT-2.jpg" alt="Image of CT-2">
 
 <br>
 
 ***Solution:***
+### <mark>___Answer No. - 01___</mark>
 >
 
 <br><br>
-___Question CT-3___
+### ___Question CT-3___
 
 <img src="image/CT-3.jpg" alt="Image of CT-3">
 
 <br>
 
 <mark>***Solution:***
-___Answer No. - 01___
+### ___Answer No. - 01___
 </mark>
 >The purpose of exception handling is to help programs deal with unexpected situations or errors that may occur during runtime. By using structured techniques to detect and respond to these exceptional conditions, developers can prevent their programs from crashing and ensure that they continue to run smoothly even when unexpected events occur.
 
@@ -137,7 +138,7 @@ int main() {
 }
 ```
 <br><br>
-<mark>___Answer No. - 02___</mark>
+### <mark>___Answer No. - 02___</mark>
 >A generic template is a tool in C++ that lets programmer to write code that works with many data types. It helps to avoid writing the same code for each data type, making your code more flexible and easier to maintain. 
 
 ```cpp
@@ -159,6 +160,129 @@ int main() {
 
 <br><br><br><br>
 ## *__MID__*
+### ___Question Mid___
+<img src="image/midd.jpg" alt="Image of Mid">
+<img src="image/mid.jpg" alt="Image of Mid">
 
+### <mark>___Answer No. - 01(a)___</mark>
+```cpp
+#include<iostream>
+using namespace std; 
+class Number{
+        int number1, number2;
+    public:
+        void set(int a, float b)
+        {
+            number1 = a;
+            number2 = b;
+        }
+        
+        void show()
+        {
+            cout<<number1<<" "<<number2<<endl;
+        }
+};
+int main(){
+    Number n;
+    n.set(7, 5.00);
+    n.show();  //7 5
+    return 0;
+}
+```
+### <mark>___Answer No. - 01(b)___</mark>
+```cpp
+#include<iostream>
+using namespace std;
+
+class Number{
+        int number1,  number2;
+    public:
+        Number(){number1 = 0; number2 = 0;}
+        Number(int a, float b)
+        {
+            number1 = a;
+            number2 = b;
+        }
+
+        void show()
+        {
+            cout<<number1<<" "<<number2<<endl;
+        }
+};
+
+int main()
+{
+    Number obj, obj1(7, 5.00);
+    obj.show(); //0 0 
+    obj1.show(); //7 5
+    return 0;
+}
+```
+### <mark>___Answer No. - 02(a)___</mark>
+```cpp
+#include <iostream>
+using namespace std;
+
+class AB
+{
+    int n1, n2;
+
+public:
+    AB(int a, int b = 0)
+    {
+        n1 = a;
+        n2 = b;
+        cout << n1 << " " << n2 << endl;
+    }
+    ~AB()
+    {
+        cout << "destructing AB" << endl;
+    }
+};
+
+class CD : public AB
+{
+    int n1, n2;
+
+public:
+    CD(int a, int b) : AB(b)
+    {
+        n1 = a;
+        n2 = b;
+        cout << n1 << " " << n2 << endl;
+    }
+    ~CD()
+    {
+        cout << "destructing CD" << endl;
+    }
+};
+
+int main() // class object niye kaj korle obosshoi c++ a return type int hobe
+{
+    CD d(10, 20);
+    return 0;
+}
+
+```
+**Output:**
+```out
+20 0
+10 20
+destructing CD
+destructing AB
+```
+>Here parent class constructor are being call at first and then the child class constructor but in the case of destructor is opposite.
+
+### <mark>___Answer No. - 02(b)___</mark>
+* __Access modifier:__
+>
+
+* __Friend Function:__
+>
+
+### <mark>___Answer No. - 03(a)___</mark>
+### <mark>___Answer No. - 03(b)___</mark>
+### <mark>___Answer No. - 04(a)___</mark>
 <br><br><br><br>
+
 ## Lab
