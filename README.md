@@ -100,7 +100,8 @@ int main(){
 <mark>***Solution:***
 ### ___Answer No. - 01___
 </mark>
->The purpose of exception handling is to help programs deal with unexpected situations or errors that may occur during runtime. By using structured techniques to detect and respond to these exceptional conditions, developers can prevent their programs from crashing and ensure that they continue to run smoothly even when unexpected events occur.
+
+> Purpose of exception handling is to help programs deal with unexpected situations or errors that may occur during runtime. By using structured techniques to detect and respond to these exceptional conditions, developers can prevent their programs from crashing and ensure that they continue to run smoothly even when unexpected events occur.
 
 >In C++, exception handling is implemented using try, catch, and throw blocks. The try block contains code that may throw an exception, and the catch block handles the exception. If an exception is thrown, the program jumps to the catch block.:
 ```cpp
@@ -189,6 +190,7 @@ int main(){
     return 0;
 }
 ```
+<br><br>
 ### <mark>___Answer No. - 01(b)___</mark>
 ```cpp
 #include<iostream>
@@ -275,14 +277,157 @@ destructing AB
 
 ### <mark>___Answer No. - 02(b)___</mark>
 * __Access modifier:__
->
+> In C++, access modifiers are keywords that control the accessibility of member variables and member functions of a class. They are used to implement data hiding, which is an important concept in object-oriented programming. Data hiding means that some data and functions in a class are hidden from the outside world, so they can only be accessed by certain functions. Access modifiers are used to implement the principle of encapsulation in Object-Oriented Programming (OOP).
+
+> There are three types of access modifiers in C++: public, private, and protected. When a member variable or member function is declared as public, it can be accessed from anywhere in the program. When a member variable or member function is declared as private, it can only be accessed from within the class. When a member variable or member function is declared as protected, it can only be accessed from within the class and its derived classes.
 
 * __Friend Function:__
->
+> A friend function in C++ is a special type of function that is not part of the class but can still access the private and protected data in the class.
 
+<br><br>
 ### <mark>___Answer No. - 03(a)___</mark>
+```cpp
+#include<iostream>
+using namespace std;
+
+class BAUST{
+public:
+    string cse;
+    void show(){cout<<"Nahid"<<endl;}
+private:
+    string eee;
+protected:
+    string me;
+};
+
+class MIT: private BAUST{
+    //all private but private will not inherit
+};
+
+class IIT: protected BAUST{
+    //all members are protected but private will not inherit
+};
+
+int main()
+{
+    BAUST ob;
+    MIT obj;
+    IIT object;
+    ob.show();
+    //obj.show(); //inaccessible private properties
+    //object.show(); //same here
+    return 0;
+}
+```
+<br><br>
 ### <mark>___Answer No. - 03(b)___</mark>
+```cpp
+#include<iostream>
+using namespace std;
+
+class A{
+public:
+    int x;
+    A()
+    {
+        cout<<"A called"<<endl;
+    }
+protected:
+    int y;
+private:
+    int z;
+};
+
+class B: public A{      //multi level
+public:
+    B()
+    {
+        cout<<"B called"<<endl;
+    }
+};
+
+class C: protected A{   //multi level
+public:
+    C(){
+        cout<<"C called"<<endl;
+    }
+};
+
+class D: public B, private C{   //multiple inheritance
+};
+
+int main()
+{
+    A a;
+    cout<<endl;
+    B b;
+    cout<<endl;
+    C c;
+    cout<<endl;
+    D d;
+    return 0;
+}
+
+```
+<br><br>
 ### <mark>___Answer No. - 04(a)___</mark>
+```cpp
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+class car;
+class bike{
+        char model[20];
+        float speed;
+        int passengers;
+    public:
+        bike(const char m[], float s, int p)
+        {
+            strcpy(model, m);
+            speed = s;
+            passengers = p;
+        }
+
+        friend void compareSpeed(car car1, bike bike1);
+};
+
+class car{
+        char model[20];
+        float speed;
+        int passengers;
+    public:
+        car(const char m[], float s, int p)
+        {
+            strcpy(model, m);
+            speed = s;
+            passengers = p;
+        }
+
+        friend void compareSpeed(car car1, bike bike1);
+};
+
+void compareSpeed(car car1, bike bike1)
+{
+    if (car1.speed > bike1.speed){
+        cout << "Car is faster than bike" << endl;
+    } else if (bike1.speed > car1.speed){
+        cout<<"Bike is faster than Car"<<endl;
+    } else {
+        cout<<"Car and Bike are at same speed"<<endl;
+    }
+}
+
+int main()
+{
+    car car1("Toyota", 120.4,4);
+    bike bike1("Yamaha", 80.0,2);
+    compareSpeed(car1, bike1);
+    return 0;
+}
+```
 <br><br><br><br>
 
 ## Lab
+
+cout
