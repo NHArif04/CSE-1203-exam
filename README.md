@@ -434,7 +434,7 @@ int main()
 # ***Final Solution***
 ## <u>***Winter 22 Solution***</u>
 ### <mark>___Answer No. - 01(a)___</mark>
-> a) Object-oriented programming (OOP) is a programming method that uses objects and their interactions to design applications and computer programs. The philosophy behind OOP is to break down a problem into smaller, manageable parts by creating objects that interact with each other. The basic principles of OOP are Abstraction, Encapsulation, Inheritance, and Polymorphism
+> Object-oriented programming (OOP) is a programming method that uses objects and their interactions to design applications and computer programs. The philosophy behind OOP is to break down a problem into smaller, manageable parts by creating objects that interact with each other. The basic principles of OOP are Abstraction, Encapsulation, Inheritance, and Polymorphism
 
 <br><br>
 
@@ -562,7 +562,7 @@ In this example, we have two namespaces: `First` and `Second`. Each namespace co
 ### <mark>___Answer No. - 03(c)___</mark>
 >  Ambiguity in function overloading occurs when the compiler cannot determine which overloaded function to call based on the arguments provided. This can happen when two overloaded functions have the same number of parameters but different types, or when the arguments provided can be implicitly converted to match the parameter types of multiple overloaded functions.
 
-}}}}Nicher eigula shudhu bujhanor jonno{{{{
+## __<s>Nicher eigula shudhu bujhanor jonno</s>__
 
 Two overloaded functions have the same number of parameters but different types:
 
@@ -717,7 +717,7 @@ In this example, we create five `Person` objects with different names, ages and 
 <br><br>
 
 ### <mark>___Answer No. - 05(a)___</mark>
-5. a) Here is a short and simple C++ code that uses the STL to solve the problem described:
+C++ code that uses the STL to solve the problem described:
 
 ```cpp
 #include <iostream>
@@ -762,7 +762,7 @@ In this example, we use a `vector` to represent the series of numbers. We then u
 ### <mark>___Answer No. - 06(a)___</mark>
 
 ```cpp
-Here is a simple and easy-to-understand C++ program that calculates and shows the area of each shape through a common interface (`Shape`):
+Here is a C++ program that calculates and shows the area of each shape through a common interface (`Shape`):
 
 ```cpp
 #include <iostream>
@@ -883,16 +883,47 @@ In this program, we use a `vector` container to store a series of numbers. We th
 <br><br>
 
 ### <mark>___Answer No. - 07(b)___</mark>
+* **i)** The Factory Method design pattern would be the best to handle this object-oriented solution. It provides a way to create objects without specifying their exact class and allows for easy addition of new types in the future.
 
+* **ii)** In this scenario, an abstract Vaccine class with common data and functions for all vaccines can be defined. Concrete subclasses CovVaxA and CovVaxB can implement the Vaccine interface for the specific vaccines. A VaccineFactory class with a createVaccine method can return an instance of the appropriate subclass. This provides a modular and extensible solution that can easily accommodate new vaccine types as they become available.
 
 <br><br>
 
 ### <mark>___Answer No. - 08(a)___</mark>
+```cpp
+#include <iostream>
+using namespace std;
 
+template <typename T>
+class Number {
+private:
+    T X;
+    T Y;
+public:
+    Number(T x, T y) : X(x), Y(y) {}
+    T getMAX() {
+        return (X > Y) ? X : Y;
+    }
+};
+
+int main() {
+    Number<int> n1(3, 4);
+    cout << "Max: " << n1.getMAX() << endl;
+
+    Number<float> n2(5.5, 6.6);
+    cout << "Max: " << n2.getMAX() << endl;
+
+    return 0;
+}
+```
 
 <br><br>
 
 ### <mark>___Answer No. - 08(b)___</mark>
+```terminal
+20 0
+10 20
+```
 <br><br><br><br>
 
 ## ***Lab***
